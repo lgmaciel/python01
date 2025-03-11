@@ -22,10 +22,10 @@ else:
 
 
 # defaults
-DEFAULT_DRAW_WIDTH = 300
-DEFAULT_DRAW_HEIGHT = 150
-DRAW_BGCOLOR = '#F3F3F7'  # "anti-flash white" (non-standard name)
-
+DEFAULT_DRAW_WIDTH = 320
+DEFAULT_DRAW_HEIGHT = 200
+#DRAW_BGCOLOR = '#F3F3F7'  # "anti-flash white" (non-standard name)
+DRAW_BGCOLOR = '#3232FF'
 
 DRAW_SVG = dedent(
     """
@@ -112,9 +112,11 @@ def command_alias(*names):
 
 # defaults
 TURTLE_HEADING = 0.0  # pointing to screen left, a.k.a. "east"
-TURTLE_COLOR = '#63A375'  # "mint" (non-standard name)
+#TURTLE_COLOR = '#63A375'  # "mint" (non-standard name)
+TURTLE_COLOR = '#32EE32'
 TURTLE_DELAY = 0.2  # pause after each visual command, in seconds
-PEN_COLOR = '#663399'  # rebeccapurple https://www.w3.org/TR/css-color-4/#valdef-color-rebeccapurple
+#PEN_COLOR = '#663399'  # rebeccapurple https://www.w3.org/TR/css-color-4/#valdef-color-rebeccapurple
+PEN_COLOR = '#EEEEEE'
 PEN_WIDTH = 2
 
 
@@ -254,7 +256,7 @@ class Turtle:
         if self.animate:
             self.draw()
 
-    @command_alias('moveto', 'mv')
+    @command_alias('moveto', 'mv', 'pulapara')
     def move_to(self, x: float, y: float):
         """Move the turtle to coordinates (x, y), drawing if the pen is down."""
         new_pos = Point(x, y)
@@ -268,7 +270,7 @@ class Turtle:
         if self.animate:
             self.draw()
 
-    @command_alias('fd')
+    @command_alias('fd', 'anda')
     def forward(self, units: float, degrees: float = 0):
         """Move turtle forward by units; draw path if pen is down.
         If `degrees` is given, turn left after moving."""
