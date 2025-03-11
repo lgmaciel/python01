@@ -1,0 +1,38 @@
+= Livros
+:revealjsdir: reveal.js
+
+:imagesdir: img
+:source-highlighter: highlight.js
+:icons: font
+
+
+[.columns]
+== Pense em Python
+
+[.column]
+image::Capa_PenseEmPython667x927.png[]
+
+[.column]
+--
+Tradução do livro Think Python (2ª ed.), de Allen B. Downey
+
+HTML:: https://penseallen.github.io/PensePython2e/
+--
+
+
+
+[.columns]
+== Python Para Todos
+
+[.column]
+image::python-para-todos.jpg[]
+
+[.column]
+--
+
+PDF:: http://do1.dr-chuck.com/pythonlearn/PT_br/pythonlearn.pdf
+
+PAPEL:: https://amazon.com/dp/B087L4LQTM
+--
+
+

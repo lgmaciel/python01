@@ -1,0 +1,155 @@
+= Título
+:revealjsdir: https://cdn.jsdelivr.net/npm/reveal.js@4.5.0
+:revealjs_theme: black
+:imagesdir: img
+:source-highlighter: highlight.js
+:icons: font
+:tip-caption: 💡
+
+
+[.columns]
+== 2 columns
+
+[.column]
+--
+* **Edgar Allen Poe**
+* Sheri S. Tepper
+* Bill Bryson
+--
+
+[.column]
+--
+Edgar Allan Poe (/poʊ/; born Edgar Poe; January 19, 1809 – October 7, 1849) was an American writer, editor, and literary critic.
+--
+
+[.columns]
+== Columns with size
+
+[.column.is-one-third]
+--
+* **Kotlin**
+* Java
+* Scala
+--
+
+[.column]
+--
+Programming language for Android, mobile cross-platform
+and web development, server-side, native,
+and data science. Open source forever Github.
+--
+
+[.columns.is-vcentered]
+== Columns Vertically Centered
+
+[.column]
+--
+* Few
+* Bullets
+* Here
+--
+
+[.column]
+image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[]
+
+
+== Slide Five
+
+Uses highlighted code
+
+[source, python]
+----
+print("Hello World")
+for _ in range(10):
+    print("Oi!")
+
+----
+
+== Trains, we love trains!
+
+video::kZH9JtPBq7k[youtube, start=34, options=autoplay]
+
+== But first
+
+WARNING: This presentation is dangerous!
+
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
+
+== Primeiro Slide
+
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+
+[%step]
+* Foo
+* Bar
+* World
+
+
+== Alfabeto
+
+[%step]
+--
+.Greek Alphabet
+* α
+* β
+* γ
+--
+
+[%step]
+--
+.Alfabeto
+* a
+* b
+* c
+--
+
+== Outro
+
+[.highlight-blue%step]
+blue
+
+[.highlight-green%step]
+white
+
+[.highlight-red%step]
+red
+
+
+== Topic
+
+[TIP,step=3]
+Finally, a pro tip...
+
+[WARNING,step=1]
+First, watch out for...
+
+[IMPORTANT.fade-up,step=2]
+Second, don't forget...
+
+
+[background-color="blue"]
+== Slide One
+
+Is very blue
+
+The [.step.highlight-red]#greatest glory in living# lies not in never falling, but in [.step.highlight-red]#rising every time we fall#.
+
+[%step]
+
+* um
+* dois
+* tres
+
+[background-color="green", transition=zoom]
+== The Great Goat
+
+image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[canvas,size=cover]
+
+
+[background-color="yellow"]
+== Slide Three
+
+Is very yellow
