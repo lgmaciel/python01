@@ -23,7 +23,7 @@ else:
 
 # defaults
 DEFAULT_DRAW_WIDTH = 320
-DEFAULT_DRAW_HEIGHT = 200
+DEFAULT_DRAW_HEIGHT = 240
 #DRAW_BGCOLOR = '#F3F3F7'  # "anti-flash white" (non-standard name)
 DRAW_BGCOLOR = '#3232FF'
 
@@ -114,7 +114,7 @@ def command_alias(*names):
 TURTLE_HEADING = 0.0  # pointing to screen left, a.k.a. "east"
 #TURTLE_COLOR = '#63A375'  # "mint" (non-standard name)
 TURTLE_COLOR = '#32EE32'
-TURTLE_DELAY = 0.2  # pause after each visual command, in seconds
+TURTLE_DELAY = 0.1  # pause after each visual command, in seconds
 #PEN_COLOR = '#663399'  # rebeccapurple https://www.w3.org/TR/css-color-4/#valdef-color-rebeccapurple
 PEN_COLOR = '#EEEEEE'
 PEN_WIDTH = 2
@@ -339,6 +339,13 @@ class Turtle:
     def toggle_pen(self):
         """Lower the pen if it's up; raises if it's down."""
         self.active_pen = not self.active_pen
+
+    @command
+    def circle(self, radius: int):        
+        for _ in range(360):        
+            forward(radius/57.8)
+            right(1)
+        
 
     def __enter__(self):
         self.saved_animate = self.animate
