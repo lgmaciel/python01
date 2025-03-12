@@ -256,7 +256,7 @@ class Turtle:
         if self.animate:
             self.draw()
 
-    @command_alias('moveto', 'mv', 'pulapara')
+    @command_alias('moveto', 'mv', 'andapara','ap')
     def move_to(self, x: float, y: float):
         """Move the turtle to coordinates (x, y), drawing if the pen is down."""
         new_pos = Point(x, y)
@@ -270,7 +270,7 @@ class Turtle:
         if self.animate:
             self.draw()
 
-    @command_alias('fd', 'anda')
+    @command_alias('fd', 'anda', 'ad')
     def forward(self, units: float, degrees: float = 0):
         """Move turtle forward by units; draw path if pen is down.
         If `degrees` is given, turn left after moving."""
@@ -282,12 +282,12 @@ class Turtle:
         if degrees:
             self.left(degrees)
 
-    @command_alias('bk')
+    @command_alias('bk','volta','vt')
     def back(self, units: float):
         """Move the turtle backward by units, drawing if the pen is down."""
         self.forward(-units)
 
-    @command_alias('jumpto', 'jp')
+    @command_alias('jumpto', 'jp', 'pulapara', 'pp')
     def jump_to(self, x: float, y: float):
         """Teleport the turtle to coordinates (x, y) without drawing."""
         self.position = Point(x, y)
@@ -297,26 +297,40 @@ class Turtle:
         if self.animate:
             self.draw()
 
-    @command_alias('lt')
+    @command_alias('gira','gr')
+    def rotate(self, degrees: float):
+        """Rotate the turtle by degrees."""
+        self.heading += degrees
+        if self.animate:
+            self.draw()
+
+    @command_alias('lt','esquerda','eq')
     def left(self, degrees: float):
         """Turn turtle left by degrees."""
         self.heading -= degrees
         if self.animate:
             self.draw()
 
-    @command_alias('rt')
+    @command_alias('rt','direita','dt')
     def right(self, degrees: float):
         """Turn turtle right by degrees."""
         self.heading += degrees
         if self.animate:
             self.draw()
 
-    @command_alias('penup', 'pu')
+    @command_alias('penup', 'pu', 'naorisca','nr')
     def pen_up(self):
         """Lift the pen, so turtle stops drawing."""
         self.active_pen = False
 
-    @command_alias('pendown', 'pd')
+    @command_alias('repita', 'rp')
+    def repeat(self, vezes: int, funcao):
+        """Repita um comando um número de vezes."""
+        for _ in range(vezes):
+            funcao()
+
+    
+    @command_alias('pendown', 'pd', 'risca', 'rc')
     def pen_down(self):
         """Lower the pen, so turtle starts drawing."""
         self.active_pen = True
